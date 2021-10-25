@@ -20,7 +20,4 @@ public class Flower {
     public Flower(FlowerType flowerType){
         this.flowerType = flowerType;
     }
-    // Add constructor with FlowerType
-    // FlowerPack
-    // FlowerBucket
 }
