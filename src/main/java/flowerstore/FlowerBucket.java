@@ -21,6 +21,6 @@ public class FlowerBucket extends Item{
 
     @Override
     public String getDescription() {
-        return "A bucket of flowers.";
+        return "A bucket of flowers";
     }
 }
