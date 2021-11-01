@@ -7,17 +7,27 @@ import lombok.ToString;
 import java.util.Arrays;
 
 @Getter @Setter @ToString
-public class Flower {
+public class Flower extends Item {
     private double price;
     private double sepalLength;
     private int[] color;
     // rgb -127 128
 
     private FlowerType flowerType;
+
+    public Flower() {
+    }
+
     public void setColor(int[] color) {
         this.color = Arrays.copyOf(color, color.length);
     }
-    public Flower(FlowerType flowerType){
+
+    public Flower(FlowerType flowerType) {
         this.flowerType = flowerType;
+    }
+
+    @Override
+    public String getDescription() {
+        return this.toString();
     }
 }

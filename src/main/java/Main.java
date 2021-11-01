@@ -1,5 +1,6 @@
-import flowerstore.Flower;
-import flowerstore.FlowerType;
+import decorators.PaperDecorator;
+import flowerstore.*;
+
 public class Main {
     public static void main(String[] args){
         Flower[] flowers = new Flower[3];
@@ -8,9 +9,9 @@ public class Main {
             flowers[i] = new Flower(FlowerType.ROSE);
             flowers[i].setColor(color);
         }
-
-        for (int i = 0; i < flowers.length; i++) {
-            System.out.println(flowers[i]);
-        }
+        FlowerPack pack = new FlowerPack(flowers[0], flowers.length);
+        FlowerBucket bucket = new FlowerBucket();
+        bucket.addFlowerPack(pack);
+        FlowerBucket bucket2 = new FlowerBucket();
     }
 }
