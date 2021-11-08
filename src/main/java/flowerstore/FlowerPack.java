@@ -1,6 +1,6 @@
 package flowerstore;
 
-public class FlowerPack {
+public class FlowerPack extends Item{
     private Flower flower;
     private int amount;
 
@@ -10,6 +10,11 @@ public class FlowerPack {
     }
     public double getPrice(){
         return flower.getPrice() * amount;
+    }
+
+    @Override
+    public String getDescription() {
+        return "A bucket of flowers.";
     }
 
     public int getAmount() {
